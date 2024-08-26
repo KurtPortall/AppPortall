@@ -13,7 +13,7 @@ body{
     height: 100vh;
     /* background: green; */
     background: rgba(4, 4, 81, 0.8);
-    /* overflow: hidden; */
+    overflow: hidden;
     
 }
 #tela{
