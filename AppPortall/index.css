@@ -1,0 +1,573 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100vw;
+    /* height: 100vh; */
+    background: pink;
+    overflow: hidden;
+}
+.tela{
+    width: 100vw;
+    height: 100vh;
+    /* background: green; */
+    background: rgba(4, 4, 81, 0.8);
+    /* overflow: hidden; */
+    
+}
+#tela{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+}
+#myvideo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 2;
+}
+#tela02{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(4, 4, 81, 50%);;
+    z-index: 2;
+}
+.menu{
+    width: 70px;
+    /* width: 25vw; */
+    height: 100vh;
+    background: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    transition: 1s linear;
+}
+.menu-ativo{
+    width: 200px;
+}
+.menu-toggle{
+    width: 30px;
+    height: 21px;
+    /* background: white; */
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%,10px);
+}
+.menu-arrow{
+    width: 40px;
+    height: 40px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%,0px);
+}
+.menu-ul{
+    margin-left: 10px;
+}
+.menu-li{
+    width: 70%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 10px;
+    /* background: red; */
+
+}
+.mli-ativo{
+    width: 100%;
+}
+.mli-Aativo{
+    background: red;
+    border-radius: 10px;
+}
+.menu-liL{
+    margin: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.menu-li-Pesquisas{
+    width: 70%;
+    margin: 10px;
+    display: flex;
+    /* background: red; */
+    /* justify-content: center; */
+    align-items: center;
+}
+.mliL-Aativo{
+    background: red;
+    border-radius: 10px;
+    
+}
+.mlip-ativo{
+    width: 100%;
+}
+.mliP-Aativo{
+    background: red;
+    border-radius: 10px;
+}
+
+.menu-div{
+    width: 30px;
+    height: 30px;
+    /* background: white; */
+    /* margin-right: 10px; */
+    margin: 5px;
+    
+}
+.menu-label{
+    color: white;
+    display: none;
+}
+.mla-ativo{
+    display: flex;
+
+}
+.secoes{
+    width: 100vw;
+    height: 250px;
+    /* background: rgb(255, 240, 192); */
+    position: absolute;
+    bottom: 8px;
+    left: 70px;
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.secoes-at {
+    left: 200px;
+}
+.ss{
+    width: 100vw;
+    height: 200px;
+    display: none;
+    align-items: center;
+    margin-top: 50px;
+    position: absolute;
+    z-index: 9;
+    transition: 1s linear;
+}
+.secao-Animes{
+    /* background: red; */
+}
+.secao-Filmes{
+    /* background: blue; */
+}
+.secao-Jogos{
+    /* background: orange; */
+}
+.secao-Livros{
+    /* background: yellow; */
+}
+.secao-Series{
+    /* background: lightblue; */
+}
+.secao-Pesquisas{
+    /* background: lightblue; */
+}
+.secao-Listas{
+    /* background: lightblue; */
+    width: 100vw;
+    height: 200px;
+    display: none;
+    align-items: center;
+    margin-top: 50px;
+    position: absolute;
+    z-index: 9;
+}
+.ss-at{
+    display: flex;
+}
+
+.btnsLR{
+    width: 30px;
+    height: 100px;
+    position: absolute;
+    bottom: 50px;
+    z-index: 1001;
+    background: transparent;
+    border: 2px solid transparent;
+    color: transparent;
+    border-radius: 10px;
+}
+.btnsLR:hover{
+    background: rgb(135, 132, 132,50%);
+    border: 2px solid white;
+    color: white;
+}
+.btl{
+    left: 70px;
+    justify-content: center;
+    align-items: center;
+}
+.btnL-a{
+    left: 200px;
+}
+.btr{
+   right: 0px; 
+   display: none;
+   justify-content: center;
+   align-items: center;
+}
+#btnFS{
+    width: 30px;
+    height: 20px;
+    border: 3px solid transparent;
+    /* background: white; */
+    bottom: 8px;
+    right: 3px;
+    z-index: 1001;
+    position: absolute;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btnFS:hover{
+    border-color: white;
+    /* background: white; */
+    .fs1{
+        background: white;
+    }
+}
+.fs1{
+    width: 20px;
+    height: 10px;
+    border-radius: 5px;
+    /* background: green; */
+    
+}
+
+.cards-Animes,
+.cards-Filmes,
+.cards-Jogos,
+.cards-Livros,
+.cards-Series,
+.cards-Listas,
+.cards-Pesquisas{
+    flex: 0 0 250px;
+    height: 150px;
+    background: gray;
+    margin: 0 10px 0 0;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+    overflow: hidden;
+    /* transition: 0.5s linear; */
+}
+.fBorder{
+    border-color: white;
+}
+#tudo_btns{
+    display: flex;
+}
+.tudo{
+    width: 100vw;
+    height: 67vh;
+    /* background: yellow; */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    color: white;
+    margin-left: 30px;
+    margin-top: 5vw;
+    transition: 1s linear;
+}
+.tudo-Ativo{
+    margin-left: 200px;
+    width: 95vw;
+}
+#textos{
+    width: 55vw;
+    /* background: pink; */
+    margin-left: 70px;
+    margin-top: 50px;
+    padding: 10px 15px;
+}
+#texto_span{
+    margin-left: 10px;
+    color: blue;
+}
+.btnAdd{
+    margin-left: 80px;
+    padding: 5px 10px;
+}
+.btnRemove{
+    margin-left: 80px;
+    padding: 5px 10px;
+    display: none;
+}
+#btnMusica{
+    margin-left: 20px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute; */
+
+    /* display: none; */
+}
+#iconeM{
+    margin-left: 5px;
+}
+#textos_gene_faixa{
+    margin: 10px 0 5px 70px;
+    display: flex;
+    align-items: center;
+   
+}
+#textos_titulo{
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+#textos_faixa02{
+    width: 50px;
+    height: 30px;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+#textos_faixa01{
+    margin-right: 20px;
+}
+#textos_genero{
+    margin-bottom: 5px;
+    margin-left: 80px;
+}
+#btnCimaBaixo{
+    margin-left: 5vw;
+    width: 90vw;
+    height: 40px;
+    position: absolute;
+    display: flex;
+    /* background: white; */
+    justify-content: center;
+    align-items: center;
+    bottom:0;
+    z-index: 10;
+}
+#fecharCB{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    display: flex;
+    /* background: red; */
+    justify-content: center;
+    align-items: center;
+    bottom:0;
+    z-index: 10;
+    transition: 0.5s linear;
+    border-radius: 50%;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: transparent;
+}
+#btnCimaBaixo:hover{
+    #fecharCB{
+        bottom: 200px;
+        background: rgb(50, 50, 50);
+        color: white;
+    }
+}
+#foiadd{
+    margin-left: 80px;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+.inputPesquisa{
+    width: 300px;
+    border-radius: 5px;
+    /* position: absolute; */
+    right: 40px;
+    text-align: center;
+    /* display: none; */
+}
+.Dpes_c{
+    /* border-radius: 5px; */
+    width: 500px;
+    position: absolute;
+    right: 50px;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Dpes1{
+    width: 30px;
+    height: 30px;
+    right: 50px;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nt:hover{
+    /* scale: 1.05; */
+    transform: translateY(-10px);
+}
+.logo{
+    width: 200px;
+    height: 150px;
+    /* background: green; */
+    position: absolute;
+    right: 130px;
+    top: 40px;
+    overflow: hidden;
+    
+}
+.logoA{
+    width: 100px;
+    height: 90px;
+    top: 80px;
+    right: 150px;
+}
+.i_logo{
+    width: 100%;
+    height: 100%;
+    filter: grayscale();
+    transition: 0.5s;
+}
+.i_logo:hover{
+    filter: none;
+}
+.menu_icone{
+    width: 100%;
+    height: 100%;
+}
+.DI{
+    width: 100%;
+}
+.inputPesquisa::placeholder{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+#hamburguer{
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+}
+/* #hamburguer:hover{
+
+} */
+#ham1{
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    transition: 1s linear;
+    
+}
+#ham2{
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    border-radius: 10px;
+    transition: 0.5s linear;
+    
+}
+#ham3{
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    transition: 1s linear;
+    
+}
+.ativoHam1{
+    position: absolute;
+    margin-top: 15px;
+    transform: rotate(135deg);
+}
+.ativoHam2{
+    display: none;
+}
+.ativoHam3{
+    top:15px;
+    transform: rotate(-135deg);
+}
+
+
+
+
+
+
+#h1portall{
+    z-index: 13;
+    position: absolute;
+    color: #fcfcfc;
+    /* opacity: 50%; */
+    font-family: Arial, Helvetica, sans-serif;
+    /* top: 19px; */
+    /* right: 50px; */
+}
+#h1portall span{
+    color: rgb(255, 217, 0);
+}
+.inicio{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: rgb(12, 12, 62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.ini{
+    opacity: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 19px;
+    right: 50px;
+}
+.inicio_centro{
+    width: 500px;
+    height: 200px;
+    background: rgba(255, 255, 255,30%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    animation: screen 3s linear infinite;
+}
+@keyframes screen{
+    0%{
+        scale: 1.0;
+    }
+    50%{
+        scale:1.2;
+    }
+}

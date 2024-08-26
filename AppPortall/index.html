@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <section class="tela">
+    <!-- <div id="inicio">
+        <div id="inicio_centro"></div>
+    </div> -->
+
+    <div id="portall" class="inicio">
+        <div  class="inic inicio_centro">
+            <h1 id="h1portall" class="" onclick="h1portall1()">PortAll<span>.</span></h1>
+        </div>
+    </div>
+    <img  id="tela" src="" alt="" >
+    <video id="myvideo" src="" autoplay muted>
+        <source src="" type="video/mp4">
+    </video>
+    <div id="tela02"></div>
+    <div class="tudo">
+        <div class="logo">
+            <img class="i_logo" src="" alt="">
+        </div>
+        <div id="Dpes" class="Dpes_c">
+            <input type="text" class="inputPesquisa" placeholder="Procurar">
+            <div id="Dpes1">
+                <img src="imgs/icones/img06.png" alt="" class="DI">
+            </div>
+        </div>
+        <h4 id="foiadd"></h4>
+        <div id="textos">
+            <h1 id="textos_titulo">Baibleid</h1>
+            <p id="textos_sinopes" ></p>
+        </div>
+        <div id="textos_gene_faixa">
+            <div id="textos_faixa02">18</div>
+            <label id="textos_faixa01">ano 2013 </label>
+            
+        </div>
+        <label id="textos_genero">Acao Drama Romance</label>
+        <div id="tudo_btns">
+            <button id="btnRemove" class="btnRemove" onclick="BtnRemoveLista(this)">Remover</button>
+            <button id="btnAdd" class="btnAdd" onclick="BtnAddLista(this)">Adicionar</button>
+            <button id="btnMusica" onclick="btnTocar()">
+                Tocar
+                <i id="iconeM" class=""> </i> 
+            </button>
+        </div>
+    </div>
+    
+
+       <nav class="menu">
+        <div class="menu-toggle" onclick="Menu_Toggle()">
+            <div id="hamburguer">
+                <div id="ham1"></div>
+                <div id="ham2"></div>
+                <div id="ham3"></div>
+            </div>
+        </div>
+        <!-- <div class="menu-arrow" onclick="Menu_Toggle()"></div> -->
+        <ul class="menu-ul">
+            <li class="menu-li" id="li-Pesquisas" onclick="Menu_li_ativar(this)">
+                <div class="menu-div">
+                    <img src="imgs/icones/img07.png" alt="" class="menu_icone">
+                </div>
+                <label class="menu-label">Pesquisar</label>
+            </li>
+           
+            <li class="menu-li mli-Aativo" id="li-Animes" onclick="Menu_li_ativar(this)">
+                <div class="menu-div">
+                    <img src="imgs/icones/img03.png" alt="" class="menu_icone">
+                </div>
+                <label class="menu-label">Animes</label>
+            </li>
+            <li class="menu-li" id="li-Filmes" onclick="Menu_li_ativar(this)">
+                <div class="menu-div">
+                    <img src="imgs/icones/img02.png" alt="" class="menu_icone">
+                </div>
+                <label class="menu-label">Filmes</label>
+            </li>
+            <li class="menu-li" id="li-Jogos" onclick="Menu_li_ativar(this)">
+                <div class="menu-div">
+                    <img src="imgs/icones/img04.png" alt="" class="menu_icone">
+                </div>
+                <label class="menu-label">Jogos</label>
+            </li>
+            <li class="menu-li" id="li-Livros" onclick="Menu_li_ativar(this)">
+                <div class="menu-div">
+                    <img src="imgs/icones/img05.png" alt="" class="menu_icone">
+                </div>
+                <label class="menu-label">Livros</label>
+            </li>
+            <li class="menu-li" id="li-Series" onclick="Menu_li_ativar(this)">
+                <div class="menu-div">
+                    <img src="imgs/icones/img01.png" alt="" class="menu_icone">
+                </div>
+                <label class="menu-label">Series</label>
+            </li>
+             <li class="menu-liL" id="li_Listas" onclick="Menu_liL_ativar(this)">
+                <div class="menu-div">
+                    <img src="imgs/icones/img08.png" alt="" class="menu_icone">
+                </div>
+                <label class="menu-label">Lista</label>
+            </li>
+        </ul>
+       </nav> 
+
+       <div class="tela-texto"></div>
+       <button id="btnR" class="btnsLR btr" onclick="Btn_R(this)">></button>
+       <button id="btnL" class="btnsLR btl" onclick="Btn_L()"><</button>
+       <div id="btnCimaBaixo" >
+        <div id="fecharCB" onclick="fecharCB()">x</div>
+       </div>
+       <div id="btnFS" onclick="Btn_Fs()">
+        <div class="fs1"></div>
+       </div>
+       <div class="secoes">
+           <div class="ss secao-Pesquisas"></div>
+           <div class="ss secao-Animes ss-at">
+            <!-- <div class="cards-Animes fBorder"></div>
+            <div class="cards-Animes"></div>
+            <div class="cards-Animes"></div> -->
+           </div>
+           <div class="ss secao-Filmes">
+            <!-- <div class="cards-Filmes fBorder"></div>
+            <div class="cards-Filmes"></div>
+            <div class="cards-Filmes"></div> -->
+           </div>
+           <div class="ss secao-Jogos"></div>
+           <div class="ss secao-Livros"></div>
+           <div class="ss secao-Series"></div>
+           <div class="secao-Listas"></div>
+       </div>
+   </section> 
+
+
+   <script src="amazon.js"></script>
+   <script>
+    var portall = document.querySelector("#portall")
+    var h1portall = document.querySelector("#h1portall")
+    var inic = document.querySelector(".inic")
+    setTimeout(()=>{
+        inic.classList.remove("inicio_centro")
+        h1portall.classList.add("ini")
+        portall.classList.remove("inicio")
+    },3000)
+
+
+   
+    var menu_labels = document.querySelectorAll(".menu-label")
+    var menu_lis = document.querySelectorAll(".menu-li")
+    var ss = document.querySelectorAll(".ss")
+    var menu = document.querySelector(".menu")
+    var secoes = document.querySelector(".secoes")
+    var secao_Animes = document.querySelector(".secao-Animes")
+    var secao_Filmes = document.querySelector(".secao-Filmes")
+    var secao_Listas = document.querySelector(".secao-Listas")
+    var secao_Pesquisas = document.querySelector(".secao-Pesquisas")
+    var tudo = document.querySelector(".tudo")
+    var secao_Jogos = document.querySelector(".secao-Jogos")
+    var inputPesquisa = document.querySelector(".inputPesquisa")
+    var li_animes = document.querySelector("#li-Animes")
+    var i_logo = document.querySelector(".i_logo")
+    var logo = document.querySelector(".logo")
+    var btr = document.querySelector(".btr")
+    var btnL = document.getElementById("btnL")
+    let valor_Icone = "Animes"
+
+    
+    let indexBT = 0
+    function btnTocar(){ 
+        var iconeM = document.querySelector("#iconeM")
+        // console.log(iconeM)
+        indexBT++
+        var elepause = document.getElementById(`audio${indexLeft}`)
+        if(indexBT == 1){
+            iconeM.className ="fa-solid fa-play"
+            elepause.play()
+        }else{
+            // iconeM.classList.remove("fa-solid fa-play")
+            iconeM.className = "fa-solid fa-pause"
+            elepause.pause()
+            indexBT = 0
+        }
+        mt = true
+    }
+
+    var arrayPesquisas;
+    
+    inputPesquisa.addEventListener("input",()=>{
+        var vInput = inputPesquisa.value.toLowerCase().trim()
+        Dpes.style.display = "flex"
+        indexLeft=0
+        // var elemento = document.querySelector(`.secao-Pesquisas`)
+
+        if(vInput == ""){
+            Formatar_Valores()
+            
+            var btnAdd = document.querySelector(".btnAdd")
+            btnAdd.style.display =  "none"
+            logo.style.display =  "none"
+           
+            secao_Pesquisas.innerHTML = ""
+            arrayPesquisas = []
+            textos_faixa02.style.display = "none"
+
+            
+        }
+        if(vInput != ""){
+            btnL.style.display = "none"
+            var btnAdd = document.querySelector(".btnAdd")
+            btnAdd.style.display =  "flex"
+            logo.style.display =  "flex"
+            btnAdd.style.display =  "flex"
+            logo.style.display =  "flex"
+            textos_faixa02.style.display = "flex"
+
+            // console.log(arrayPesquisas)
+            secao_Pesquisas.innerHTML = ""
+            arrayPesquisas = []
+    
+            var ter = arrayO.filter(objeto => objeto.titulo.toLowerCase().includes(vInput))
+            
+            if(!arrayPesquisas.includes(ter)){
+                var btnAdd = document.querySelector(".btnAdd")
+                btnAdd.style.display =  "flex"
+                logo.style.display =  "flex"
+                textos_faixa02.style.display = "flex"
+                arrayPesquisas.push(ter)
+                arrays = arrayPesquisas[0]
+                classes = "cards-Pesquisas"
+                ids = "s-pe"
+
+                var secao = document.querySelector(".secao-Pesquisas")
+
+                // console.log(arrays[0])
+                
+        
+                arrays.forEach((arr,i) =>{
+                    var div = document.createElement("div")
+                    CriarElementos(div,`${ids}${i}`,`nt ${classes}`,"",secao)
+                    div.onclick = PegarIndex
+                    if(i==0){
+                        div.className = `nt ${classes} fBorder`
+                        // div.textContent = arrays[0].titulo
+                    }
+                    var img = document.createElement("img")
+                    CriarElementos(img,`img$${i}`,"",``,div)
+                    img.src = arr.img
+                    img.style.width = "100%"
+                    img.style.height = "100%"
+                    
+                })
+                
+                Formatar_Valores()
+                transformar()
+                
+                if(arrays.length <=1){
+                    btnL.style.display = "none"
+                }else{
+                    btnL.style.display = "flex"
+                }
+            }
+        }
+    })
+
+
+
+    
+    
+
+    const arrayValor = obj
+    // console.log(arrayValor)
+
+    
+    const arrayO = obj.sort((a,b)=> { return a.titulo.toLowerCase().localeCompare(b.titulo.toLowerCase())})
+    
+    var arrayAnimes = arrayO.filter(obj => obj.tipo == "animes")
+    // console.log(arrayAnimes)
+    var arrayFilmes = arrayO.filter(obj => obj.tipo == "filmes")
+    // console.log(arrayFilmes)
+    var arrayJogos = arrayO.filter(obj => obj.tipo == "jogos")
+    // console.log(arrayJogos)
+    var arrayLivros = arrayO.filter(obj => obj.tipo == "Livros")
+    // console.log(arrayLivros)
+    var arraySeries = arrayO.filter(obj => obj.tipo == "Series")
+    // console.log(arraySeries)
+
+    var arrayListas = [];
+
+    let arrays; let classes;let ids ;
+    
+    let arrayC_Ant = ["Animes"]
+    var Dpes_c = document.querySelector(".Dpes_c")
+    let indexMenu_Label = 0 
+    function Menu_Toggle(){
+        indexMenu_Label++
+        if(indexMenu_Label == 1){
+            
+            menu.classList.add("menu-ativo")
+            btnL.classList.add("btnL-a")
+            secoes.classList.add("secoes-at")
+            foiadd.style.marginLeft = "90px"
+            
+            ham1.classList.add('ativoHam1')
+            ham2.classList.add('ativoHam2')
+            ham3.classList.add('ativoHam3')
+            
+            
+            menu_lis.forEach(menu_li=>{
+                menu_li.classList.add("mli-ativo")
+            })
+            menu_labels.forEach(menu_label=>{
+                menu_label.classList.add("mla-ativo")
+            })
+            tudo.classList.add("tudo-Ativo")
+           
+            Dpes_c.style.rigth = "200px"
+            // var li_Pesquisas = document.querySelector(".menu-li-Pesquisas")
+            // li_Pesquisas.classList.add("mliP-Aativo")
+            // li_Pesquisas.classList.add("mliP-ativo")
+            
+        }if(indexMenu_Label ==2){
+            menu.classList.remove("menu-ativo")
+            secoes.classList.remove("secoes-at")
+            btnL.classList.remove("btnL-a")
+            tudo.classList.remove("tudo-Ativo")
+            foiadd.style.marginLeft = "80px"
+            
+            ham1.classList.remove('ativoHam1')
+            ham2.classList.remove('ativoHam2')
+            ham3.classList.remove('ativoHam3')
+
+            menu_lis.forEach(menu_li=>{
+                menu_li.classList.remove("mli-ativo")
+            })
+            menu_labels.forEach(menu_label=>{
+                menu_label.classList.remove("mla-ativo")
+            })
+            indexMenu_Label =0
+        }
+
+    }
+    
+
+    function Menu_li_ativar(elemento){
+        if(mt == true){
+            var elpause = document.getElementById(`audio${indexLeft}`)
+            elpause.pause()
+            elpause.currentTime = 0
+            btnMusica.innerHTML = `Tocar <i id="iconeM"></i>`
+            mt = false
+
+        }
+        logo.classList.remove("logoA")
+        var Id = elemento.id.replace("li-","")
+        
+        logo.style.display = "flex"
+        if(Id == "Animes"){
+            btnMusica.style.display = "flex"
+        }
+        if(Id != "Animes"){
+            btnMusica.style.display = "none"
+            
+        }
+        // li_Pesquisas.classList.remove("mliP-Aativo")
+        Dpes.style.display = "none"
+        
+        textos_faixa02.style.display =  "flex"
+        menu_lis.forEach(menu_li =>{
+            menu_li.classList.remove("mli-Aativo")
+        })
+        elemento.classList.add("mli-Aativo")
+        
+        menu.classList.remove("menu-ativo")
+        
+        secoes.classList.remove("secoes-at")
+        
+        tudo.classList.remove("tudo-Ativo")
+        
+        menu_lis.forEach(menu_li=>{
+            menu_li.classList.remove("mli-ativo")
+        })
+        menu_labels.forEach(menu_label=>{
+            menu_label.classList.remove("mla-ativo")
+        })
+        
+
+        li_Listas.classList.remove("mliL-Aativo")
+        secao_Listas.style.display = "none"
+        if(Id != "Pesquisas"){
+            
+            if(Id == "Jogos"){
+                myvideo.style.display = "flex"
+            }else{
+                myvideo.style.display = "none"
+
+            }
+            
+            
+
+            inputPesquisa.value = ""
+            Dpes.style.display = "none"
+            var btnAdd = document.querySelector(".btnAdd")
+            var btnRemove = document.querySelector(".btnRemove")
+            btnAdd.style.display =  "flex"
+            btnRemove.style.display =  "none"
+            
+            indexMenu_Label = 0
+            
+            ss.forEach(s =>{
+                s.classList.remove("ss-at")
+                // console.log(s)
+            })
+            
+            var li = elemento.id.replace("li-","")
+            
+            valor_Icone = li
+            
+            arrayC_Ant.push(li)
+            // console.log(arrayC_Ant)
+            
+            // alert(valor_Icone)
+            
+            var secao = document.querySelector(`.secao-${li}`)
+            secao.classList.add("ss-at")
+            
+            btnL.classList.remove("btnL-a")
+            
+            
+            if(arrayC_Ant.length == 2){
+                arrayC_Ant.shift()
+                // alert(arrayC_Ant.length)
+                
+                indexLeft = 0
+                var ele = document.querySelector(`.secao-`+valor_Icone)
+                ele.style.marginLeft = `-${(leftEle*indexLeft)}px`
+                btr.style.display = "none"
+            }
+            
+            var secao = document.querySelector(`.secao-`+valor_Icone)
+            secao.innerHTML = ""
+
+            
+            
+            if(valor_Icone == "Animes"){
+                arrays = arrayAnimes
+                classes = "cards-Animes"
+                ids = "s-an"
+            }
+            if(valor_Icone == "Filmes"){
+                arrays = arrayFilmes
+                classes = "cards-Filmes"
+                ids = "s-fi"
+            }
+            if(valor_Icone == "Jogos"){
+                arrays = arrayJogos
+                classes = "cards-Jogos"
+                ids = "s-jo"
+            }
+            if(valor_Icone == "Livros"){
+                arrays = arrayLivros
+                classes = "cards-Livros"
+                ids = "s-li"
+            }
+            if(valor_Icone == "Series"){
+                arrays = arraySeries
+                classes = "cards-Series"
+                ids = "s-se"
+            }
+            
+            
+            arrays.forEach((arr,i) =>{
+                var div = document.createElement("div")
+                CriarElementos(div,`${ids}${i}`,`nt ${classes}`,"",secao)
+                div.onclick = PegarIndex
+                if(i==0){
+                    div.className = `nt ${classes} fBorder`
+                    // div.textContent = arrays[0].titulo
+                }
+                var img = document.createElement("img")
+                CriarElementos(img,`img${i}`,"",``,div)
+                img.src = arr.img
+                img.style.width = "100%"
+                img.style.height = "100%"
+                if(arr.musicas){
+                    var au = document.createElement("audio")
+                    CriarElementos(au,`audio${i}`,"",``,div)
+
+                    var so = document.createElement("source")
+                    CriarElementos(so,`musica${i}`,"",``,au)
+                    so.src = `${arr.musicas}`
+                    so.type = "audio/mp3"
+                }
+                
+            })
+            
+            
+            CardsFilho0()
+            
+            // textos_titulo.textContent = arrays[indexLeft].titulo
+            transformar()
+            
+            indexBT = 0
+        
+        }
+        if(Id == "Pesquisas"){
+            logo.classList.remove("logoA")
+            // myvideo.style.display = "none"
+            myvideo.style.display = "flex"
+            logo.style.display =  "none"
+            var elepause = document.getElementById(`audio${indexLeft}`)
+            elepause.pause()
+            elepause.currentTime = 0
+            btnMusica.innerHTML = `Tocar <i id="iconeM"></i>`
+            indexBT = 0
+            
+            btnMusica.style.display = "none"
+            Formatar_Valores()
+            indexMenu_Label = 0
+            Dpes.style.display = "flex"
+            
+            ss.forEach(s =>{
+                s.classList.remove("ss-at")
+                // console.log(s)
+            })
+            var btnRemove = document.querySelector(".btnRemove")
+            btnRemove.style.display =  "none"
+
+            valor_Icone = Id
+            var secao = document.querySelector(`.secao-`+valor_Icone)
+
+            // var secao = document.querySelector(`.secao-${li}`)
+            secao.classList.add("ss-at")
+
+            secao.innerHTML = ""
+            textos_faixa02.style.display = "none"
+            var btnAdd = document.querySelector(".btnAdd")
+            btnAdd.style.display = "none"
+
+        
+        }
+        
+    }
+    
+    // aumentar a tela com o Btn_Fs
+    function Btn_Fs(){
+        var fs1 = document.querySelector(".fs1")
+        if(!document.fullscreenElement){
+            fs1.style.display = "none"
+            document.documentElement.requestFullscreen()
+        }else{
+            fs1.style.display = "flex"
+            document.exitFullscreen()
+            
+        }
+    }
+
+    let leftEle = 264
+    let indexLeft = 0
+    let indexRigth = 0
+    
+    // funcao Botao Esquerda
+    function Btn_L(){
+        var btnAdd = document.getElementById("btnAdd")
+        // alert(indexLeft)
+        var elepause = document.getElementById(`audio${indexLeft}`)
+        elepause.pause()
+        elepause.currentTime = 0
+        btnMusica.innerHTML = `Tocar <i id="iconeM"></i>`
+        indexBT = 0
+
+        var elemento = document.querySelector(`.secao-`+valor_Icone)
+        indexLeft++
+        if(elemento.children.length == indexLeft){
+            indexLeft= 0
+            elemento.style.marginLeft = `-${(leftEle*indexLeft)}px`
+            btnR.style.display = "none"
+            CardsFilho0()
+            transformar()
+            if(valor_Icone == "Listas"){
+                
+                btnAdd.style.display = "none"
+            }else{
+                btnAdd.style.display =  "flex"
+
+            }
+        }else{
+            // var elepause = document.getElementById(`audio${indexLeft}`)
+            elepause.pause()
+            elemento.style.marginLeft = `-${(leftEle*indexLeft)}px`
+            btr.style.display = "flex"
+            if(valor_Icone == "Listas"){
+                
+                btnAdd.style.display = "none"
+            }else{
+                btnAdd.style.display =  "flex"
+
+            }
+            CardsFilhoIndexLeft()
+            if(valor_Icone== "Listas"){
+                btnAdd.style.display =  "none"
+            }
+        }
+    }
+    function Btn_R(ele){
+        var btnAdd = document.querySelector(".btnAdd")
+        if(valor_Icone == "Listas"){
+            btnAdd.style.display = "none"
+        }else{
+            btnAdd.style.display =  "flex"
+
+        }
+        var elepause = document.getElementById(`audio${indexLeft}`)
+        elepause.pause()
+        elepause.currentTime = 0
+        btnMusica.innerHTML = `Tocar <i id="iconeM"></i>`
+        indexBT = 0
+            
+        if(indexLeft == 1){
+            ele.style.display = "none"
+        }else{
+        }
+        var elemento = document.querySelector(`.secao-`+valor_Icone)
+        
+        indexLeft--
+        elemento.style.marginLeft = `-${(leftEle*indexLeft)}px`
+        CardsFilhoIndexLeft()
+        
+        
+                
+
+    }
+    
+    
+    // colocar Bordar Branca nos Cards
+    function CardsFilhoIndexLeft(){
+        var cards = document.querySelectorAll(".cards-"+valor_Icone)
+        cards.forEach(card =>{
+            card.classList.remove("fBorder")
+        })
+        if(cards.length >0){
+            cards[indexLeft].classList.add("fBorder") 
+            transformar()
+        }
+        if(valor_Icone == "Listas"){
+            btnAdd.style.display ="none"
+        }else{
+            btnAdd.style.display ="flex"
+
+        }
+        // textos_titulo.textContent = arrays[indexLeft].titulo
+        
+        
+    }
+    function CardsFilho0(){
+        var cards = document.querySelectorAll(".cards-"+valor_Icone)
+        cards.forEach(card =>{
+            card.classList.remove("fBorder")
+        })
+        if(cards.length > 0){
+            cards[0].classList.add("fBorder")
+        }
+        if(valor_Icone == "Listas"){
+            btnAdd.style.display = "none"
+        }else{
+            btnAdd.style.display = "flex"
+
+        }
+        // textos_titulo.textContent = arrays[indexLeft].titulo
+        // var t = textos_titulo.textContent
+
+        
+
+    }
+
+    // criar elemento
+    function CriarElementos(elementoC,Id,Classe,Texto,Pai){
+        elementoC.id = Id
+        elementoC.className = Classe
+        elementoC.textContent = Texto
+        Pai.appendChild(elementoC)
+        return elementoC
+    }
+
+    let valorSinopes = "";
+    let indexSpan = 0;
+    function transformar(){
+        if(arrays[indexLeft]){
+            if(valor_Icone == "Jogos" && arrays[indexLeft].video ){
+                myvideo.src = arrays[indexLeft].video
+            }
+            else if(valor_Icone == "Pesquisas" && arrays[indexLeft].video){
+                // alert("c")
+                myvideo.style.display = "flex"
+                myvideo.src = arrays[indexLeft].video
+            }
+            else if(valor_Icone == "Listas" && arrays[indexLeft].video){
+                // alert("c")
+                myvideo.style.display = "flex"
+                myvideo.src = arrays[indexLeft].video
+            }
+            else{
+                // alert("p")
+                 myvideo.style.display = "none"
+                myvideo.src = ""
+            }
+            
+            
+            textos_titulo.textContent = arrays[indexLeft].titulo
+            valorSinopes = arrays[indexLeft].sinopes
+            textos_sinopes.innerHTML = valorSinopes.substring(0,200)+`<span id="texto_span" onclick="verspan()">ver mais...</span>`
+            textos_faixa01.textContent = arrays[indexLeft].faixa[0]
+            textos_faixa02.textContent = arrays[indexLeft].faixa[1]
+            CorFaixa()
+            textos_genero.textContent = arrays[indexLeft].genero
+            tela.src= `${arrays[indexLeft].fundo}`
+            if(arrays[indexLeft].stream == Amazon || arrays[indexLeft].stream == Gbooks || arrays[indexLeft].stream == Wattpad){
+                logo.classList.add("logoA")
+            }else{
+                logo.classList.remove("logoA")
+            }
+            i_logo.src = arrays[indexLeft].stream
+            var btnAdd = document.querySelector(".btnAdd")
+            btnAdd.style.display =  "flex"
+            textos_faixa02.style.display = "flex"
+        }
+    }
+    function Formatar_Valores(){
+        myvideo.src = ""
+        i_logo.src = ""
+        textos_titulo.textContent = ""
+        valorSinopes = ""
+        textos_sinopes.innerHTML = ""
+        textos_faixa01.textContent = ""
+        textos_faixa02.textContent = ""
+        textos_genero.textContent = ""
+        tela.src= ""
+        var btnAdd = document.querySelector(".btnAdd")
+        btnAdd.style.display =  "none"
+        textos_faixa02.style.display = "none"
+    } 
+
+    function verspan(){
+        indexSpan ++
+        if(indexSpan == 1){
+            textos_sinopes.innerHTML = valorSinopes+`<span id="texto_span" onclick="verspan()">ver menos...</span>`
+        }else{
+            textos_sinopes.innerHTML = valorSinopes.substring(0,200)+`<span id="texto_span" onclick="verspan()">ver mais...</span>`
+            indexSpan=0
+        }
+
+    }
+
+    function Menu_li_Pesquisar(ele){
+        // myvideo.style.display = "flex"
+        var elepause = document.getElementById(`audio${indexLeft}`)
+        elepause.pause()
+        elepause.currentTime = 0
+        btnMusica.innerHTML = `Tocar <i id="iconeM"></i>`
+        indexBT = 0
+
+        btnMusica.style.display = "none"
+
+        ele.classList.add("mliP-Aativo")
+        
+        menu_lis.forEach(menu_li =>{
+            menu_li.classList.remove("mli-Aativo")
+        })
+        
+        var secao_Pesquisas = document.querySelector(".secao-Pesquisas")
+        secao_Pesquisas.style.display = "flex"
+        
+        ss.forEach(s =>{
+            s.classList.remove("ss-at")
+            // console.log(s)
+            
+        })
+        Formatar_Valores()
+
+    }
+
+    function Menu_liL_ativar(ele){
+        logo.classList.remove("logoA")
+        myvideo.style.display = "none"
+        if(mt == true){
+            var elepause = document.getElementById(`audio${indexLeft}`)
+            elepause.pause()
+            elepause.currentTime = 0
+             btnMusica.innerHTML = `Tocar <i id="iconeM"></i>`
+            indexBT = 0
+            mt = false
+        }
+        btnMusica.style.display = "none"
+        inputPesquisa.value = ""
+        Dpes.style.display = "none"
+
+        if(arrayListas.length <=1){
+            btnL.style.display = "none"
+        }else{
+            btnL.style.display = "flex"
+        }
+        if(arrayListas.length == 0){
+            
+            Formatar_Valores()
+            menu_labels.forEach(menu_label=>{
+                menu_label.classList.remove("mla-ativo")
+            })
+            logo.style.display = "none"
+            menu.classList.remove("menu-ativo")
+            indexMenu_Label = 0 
+
+            ele.classList.add("mliL-Aativo")
+            menu_lis.forEach(menu_li =>{
+                menu_li.classList.remove("mli-Aativo")
+            })
+
+            ss.forEach(s =>{
+                s.classList.remove("ss-at")
+                // console.log(s)
+                
+            })
+            
+           
+        
+            textos_faixa02.style.display =  "none"
+        }else{
+           
+            logo.style.display = "flex"
+            textos_faixa02.style.display =  "flex"
+            ele.classList.add("mliL-Aativo")
+            menu_lis.forEach(menu_li =>{
+                menu_li.classList.remove("mli-Aativo")
+            })
+            
+            var secao_Listas = document.querySelector(".secao-Listas")
+            secao_Listas.style.display = "flex"
+            
+            ss.forEach(s =>{
+                s.classList.remove("ss-at")
+                // console.log(s)
+                
+            })
+            
+            arrays = arrayListas
+            secao_Listas.innerHTML = ""
+            var btnAdd = document.querySelector(".btnAdd")
+            var btnRemove = document.querySelector(".btnRemove")
+            btnAdd.style.display =  "none"
+            btnRemove.style.display =  "flex"
+            
+            arrays.forEach((arr,i) =>{
+                // console.log(arr)
+                var div = document.createElement("div")
+                CriarElementos(div,`s-la${i}`,"nt cards-Listas","",secao_Listas)
+                div.onclick = PegarIndex
+                if(i==0){
+                    div.className = `nt cards-Listas fBorder`
+                    // div.textContent = arrays[0].titulo
+                }
+                var img = document.createElement("img")
+                CriarElementos(img,`img${i}`,"",``,div)
+                img.src = arr.img
+                img.style.width = "100%"
+                img.style.height = "100%"
+                
+            })
+            
+            valor_Icone = "Listas"
+            indexLeft=0
+            secao_Listas.style.marginLeft = `-${(leftEle*indexLeft)}px`
+            CardsFilhoIndexLeft()
+            CardsFilho0()
+            
+            
+        }
+        var btnAdd = document.querySelector(".btnAdd")
+            var btnRemove = document.querySelector(".btnRemove")
+            btnAdd.style.display =  "none"
+            // btnRemove.style.display =  "none"       
+    }
+
+    var secoes = document.querySelector(".secoes")
+    var indexsecao = 0
+    function fecharCB(){
+        indexsecao++
+        if(indexsecao == 1){
+            secoes.style.display = "none"
+        }else{
+            secoes.style.display = "block"
+            indexsecao=0
+        }
+    }
+
+    function BtnAddLista(ele){
+        var t = textos_titulo.textContent
+        var verificar = arrayListas.some(item => item.titulo == t)
+        if(!verificar){
+            var obj = arrayO.find(obj => obj.titulo == t)
+            arrayListas.push(obj)
+            foiadd.textContent = `${textos_titulo.textContent} Adicionado a Lista`
+            setTimeout(function (){
+                foiadd.textContent = ""
+            },1500)
+
+        }else{
+            foiadd.textContent = `${textos_titulo.textContent} Ja Estar na  Lista`
+            setTimeout(function (){
+                foiadd.textContent = ""
+            },1000)
+        }
+        // console.log(arrayListas)
+        // console.log(arrayO)
+
+    }
+    function BtnRemoveLista(ele){
+        var secao_Listas = document.querySelector(".secao-Listas")
+        secao_Listas.style.display = "flex"
+        var t = textos_titulo.textContent
+        var tirararray = arrayListas.filter(item => item.titulo != t)
+        arrayListas = tirararray
+
+        arrays = arrayListas
+        secao_Listas.innerHTML = ""
+        var btnAdd = document.querySelector(".btnAdd")
+        var btnRemove = document.querySelector(".btnRemove")
+        btnAdd.style.display =  "none"
+        btnRemove.style.display =  "flex"
+
+        foiadd.textContent = `${textos_titulo.textContent}Removido da  Lista`
+        setTimeout(function (){
+            foiadd.textContent = ""
+        },1000)
+
+        arrays.forEach((arr,i) =>{
+            // console.log(arr)
+            var div = document.createElement("div")
+            CriarElementos(div,`s-lt${i}`,"nt cards-Listas","",secao_Listas)
+            div.onclick = PegarIndex;
+            div.id = `s-lt${i}`
+            if(i==0){
+                div.className = `nt cards-Listas fBorder`
+                // div.textContent = arrays[0].titulo
+            }
+            var img = document.createElement("img")
+            CriarElementos(img,`img${i}`,"",``,div)
+            img.src = arr.img
+            img.style.width = "100%"
+            img.style.height = "100%"
+            
+        })
+
+        
+        Formatar_Valores()
+        var btnAdd = document.querySelector(".btnAdd")
+        var btnRemove = document.querySelector(".btnRemove")
+        btnAdd.style.display =  "none"
+
+        if(arrayListas.length  == 0){
+            btnRemove.style.display =  "none"
+            textos_faixa02.style.display =  "none"
+            foiadd.textContent = "Lista Vazia"
+             logo.style.display = "none"
+
+        }
+
+        valor_Icone = "Listas"
+        indexLeft=0
+        secao_Listas.style.marginLeft = `-${(leftEle*indexLeft)}px`
+        CardsFilhoIndexLeft()
+        CardsFilho0()
+        if(arrayListas.length <=1){
+            btnL.style.display = "none"
+        }else{
+            btnL.style.display = "flex"
+        }
+    
+    }
+
+    function CorFaixa(){
+        switch(textos_faixa02.textContent){
+            case "Livre":
+            textos_faixa02.style.background = "green"
+            break
+            case "18":
+            textos_faixa02.style.background = "red"
+            break
+            case "16":
+            textos_faixa02.style.background = "orange"
+            break
+            case "14":
+            textos_faixa02.style.background = "blue"
+            break
+            case "12":
+            textos_faixa02.style.background = "yellow"
+            break
+        }
+    }
+    let mt = false
+    function PegarIndex(){
+        var elepause = document.getElementById(`audio${indexLeft}`)
+        
+
+        var t = this.id.substring(4)
+        var dec = parseInt(t,10)
+        indexLeft = dec
+        var secao = document.querySelector(`.secao-${valor_Icone}`)
+        secao.style.marginLeft = `-${(leftEle*indexLeft)}px`
+        // console.log(secao)
+        
+        btnR.style.display = "flex"
+        btnL.style.display = "flex"
+       
+        CardsFilhoIndexLeft()
+        elepause.pause()
+        elepause.currentTime = 0
+        btnMusica.innerHTML = `Tocar <i id="iconeM"></i>`
+        indexBT = 0
+        mt = true
+        
+    }
+    
+    li_animes.click();
+
+
+
+   </script>
+</body>
+</html>
