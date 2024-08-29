@@ -350,6 +350,9 @@
     
 
     function Menu_li_ativar(elemento){
+        ham1.classList.remove('ativoHam1')
+        ham2.classList.remove('ativoHam2')
+        ham3.classList.remove('ativoHam3')
         if(mt == true){
             var elpause = document.getElementById(`audio${indexLeft}`)
             elpause.pause()
